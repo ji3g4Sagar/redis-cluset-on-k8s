@@ -11,7 +11,7 @@
 * cluster reset
 * flushdb
 
-### kubectl exec -it redis-app-0 -- redis-cli -h localhost -a <your own password if had> --cluster create --cluster-replicas 1 $(kubectl get pods -l app=redis-cluster -o jsonpath='{range.items[*]}{.status.podIP}:6379 ')
+### kubectl exec -it redis-app-0 -- redis-cli -h localhost -a "your own password if had" --cluster create --cluster-replicas 1 $(kubectl get pods -l app=redis-cluster -o jsonpath='{range.items[*]}{.status.podIP}:6379 ')
 
 
 
